@@ -1,0 +1,46 @@
+.Keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--keypad-background);
+    border-radius: 0.5rem;
+}
+
+.Keypad__item {
+    font-size: 1.625rem;
+    color: var(--text-color-second);
+    cursor: pointer;
+    border: none;
+    border-radius: 0.1rem;
+    background-color: var(--key-background-first);
+    box-shadow: 0px 0.4375rem 1px 0px var(--key-shadow-first);
+    transition: none !important;
+}
+
+.Keypad__item:active {
+    transform: translateY(0.4375rem);
+    box-shadow: none;
+}
+
+.Keypad__item--reset,
+.Keypad__item--equals,
+.Keypad__item--del {
+    color: var(--text-color-first);
+}
+
+.Keypad__item--reset,
+.Keypad__item--equals {
+    grid-column: 2 span;
+}
+
+.Keypad__item--reset,
+.Keypad__item--del {
+    background-color: var(--key-background-third);
+    box-shadow: 0px 0.4375rem 1px 0px var(--key-shadow-third);
+}
+
+.Keypad__item--equals {
+    background-color: var(--key-background-second);
+    box-shadow: 0px 0.4375rem 1px 0px var(--key-shadow-second);
+}

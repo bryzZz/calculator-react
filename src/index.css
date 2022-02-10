@@ -1,0 +1,7 @@
+html {
+    font-size: clamp(14px, 3vw, 16px);
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+}

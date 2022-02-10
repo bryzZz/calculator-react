@@ -1,0 +1,12 @@
+.ThemeToggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ThemeToggle__title {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 0;
+    color: var(--text-color-first);
+}

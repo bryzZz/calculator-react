@@ -1,0 +1,16 @@
+.Screen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background-color: var(--screen-background);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.2rem;
+
+    font-size: 2rem;
+    color: var(--text-color-first);
+
+    cursor: default;
+    overflow-x: hidden;
+}

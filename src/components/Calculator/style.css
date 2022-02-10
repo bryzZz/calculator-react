@@ -1,0 +1,19 @@
+.Calculator__container {
+    max-width: 530px;
+    margin: 0 auto;
+    padding: 3vh 15px 0;
+}
+
+.Calculator__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+
+.Calculator__title {
+    font-size: 1.75rem;
+    line-height: 0;
+    color: var(--text-color-first);
+}

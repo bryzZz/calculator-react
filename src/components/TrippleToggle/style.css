@@ -1,0 +1,101 @@
+.TrippleToggle {
+    margin: auto;
+    position: relative;
+    text-align: center;
+    font-size: 9px;
+
+    box-sizing: content-box;
+}
+
+.TrippleToggle * {
+    box-sizing: content-box;
+    transition: none !important;
+}
+.radio1,
+.radio2,
+.radio3 {
+    position: absolute;
+    /*top: -9999px; - don't use may cause focus/scolling issues*/
+    left: -9999px;
+}
+.topLabelContainer {
+    margin: auto;
+    padding-left: 6.5em; /*must match .labelLeft width + padding*/
+}
+.labelTop {
+    width: 2.2em;
+    margin: auto;
+    padding: 0 1px 0 1px;
+    display: inline-block;
+    text-align: center;
+    color: var(--text-color-first);
+}
+.labelLeft {
+    width: 6em; /*must match .topLabelContainer margin-left*/
+    height: 3em;
+    padding-right: 0.5em;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+    color: var(--text-color-first);
+}
+.sliderContainer {
+    height: 2em;
+    width: 6em;
+    margin: 2px auto;
+    position: relative;
+    padding: 2px;
+    display: inline-block;
+    border-radius: 1em;
+}
+
+.label1,
+.label2,
+.label3 {
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 2em;
+    background: var(--toggle-background);
+    cursor: pointer;
+}
+.radio1:checked ~ span .label1,
+.radio1:checked ~ span .label3,
+.radio2:checked ~ span .label1,
+.radio2:checked ~ span .label2,
+.radio3:checked ~ span .label2,
+.radio3:checked ~ span .label3 {
+    /*hide labels */
+    position: absolute;
+    /*top: -9999px;*/
+    left: -9999px;
+}
+.slider {
+    width: 2em;
+    height: 2em;
+    margin: 4px;
+    position: absolute;
+    display: inline-block;
+    pointer-events: none; /*ie fallback may be required */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1em;
+    background-color: var(--toggle-color);
+    transition: 0.4s !important;
+}
+
+.radio2:checked ~ span .slider {
+    transform: translateX(2em);
+}
+
+.radio3:checked ~ span .slider {
+    transform: translateX(4em);
+}
