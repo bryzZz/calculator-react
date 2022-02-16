@@ -2,6 +2,58 @@ html {
     font-size: clamp(14px, 3vw, 16px);
 }
 
+html[data-theme='0'] {
+    --main-background: hsl(222, 26%, 31%);
+    --keypad-background: hsl(223, 31%, 20%);
+    --toggle-background: var(--keypad-background);
+    --toggle-color: hsl(6, 63%, 50%);
+    --screen-background: hsl(224, 36%, 15%);
+
+    --key-background-first: hsl(30, 25%, 89%);
+    --key-shadow-first: hsl(28, 16%, 65%);
+    --key-background-second: hsl(6, 63%, 50%);
+    --key-shadow-second: hsl(6, 70%, 34%);
+    --key-background-third: hsl(225, 21%, 49%);
+    --key-shadow-third: hsl(224, 28%, 35%);
+
+    --text-color-first: #fff;
+    --text-color-second: hsl(221, 14%, 31%);
+}
+html[data-theme='1'] {
+    --main-background: hsl(0, 0%, 90%);
+    --keypad-background: hsl(0, 5%, 81%);
+    --toggle-background: var(--keypad-background);
+    --toggle-color: hsl(25, 98%, 40%);
+    --screen-background: hsl(0, 0%, 93%);
+
+    --key-background-first: hsl(45, 7%, 89%);
+    --key-shadow-first: hsl(35, 11%, 61%);
+    --key-background-second: hsl(25, 98%, 40%);
+    --key-shadow-second: hsl(25, 99%, 27%);
+    --key-background-third: hsl(225, 21%, 49%);
+    --key-shadow-third: hsl(185, 58%, 25%);
+
+    --text-color-first: hsl(60, 10%, 19%);
+    --text-color-second: hsl(0, 0, 100%);
+}
+html[data-theme='2'] {
+    --main-background: hsl(268, 75%, 9%);
+    --keypad-background: hsl(268, 71%, 12%);
+    --toggle-background: var(--keypad-background);
+    --toggle-color: hsl(176, 100%, 44%);
+    --screen-background: var(--keypad-background);
+
+    --key-background-first: hsl(268, 47%, 21%);
+    --key-shadow-first: hsl(290, 70%, 36%);
+    --key-background-second: hsl(176, 100%, 44%);
+    --key-shadow-second: hsl(177, 92%, 70%);
+    --key-background-third: hsl(281, 89%, 26%);
+    --key-shadow-third: hsl(285, 91%, 52%);
+
+    --text-color-first: hsl(52, 100%, 62%);
+    --text-color-second: hsl(0, 0, 100%);
+}
+
 body {
     font-family: 'Spartan', sans-serif;
 }

@@ -1,10 +1,10 @@
 import './style.css';
-import { ThemeContext } from '@/ThemeContext';
+import { ThemeContext } from 'components/ThemeContext';
 import { useContext } from 'react';
 import TrippleToggle from '../TrippleToggle/TrippleToggle';
 
 export default function ThemeToggle() {
-    const { themeIndex, changeTheme } = useContext(ThemeContext);
+    const { theme, changeTheme } = useContext(ThemeContext);
 
     const handleChange = (value) => {
         changeTheme(value);
@@ -14,7 +14,7 @@ export default function ThemeToggle() {
         <div className='ThemeToggle'>
             <TrippleToggle
                 label='THEME'
-                checked={themeIndex}
+                checked={+theme}
                 onChange={handleChange}
             />
         </div>
